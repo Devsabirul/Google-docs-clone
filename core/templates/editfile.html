@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% block title %}Home Page{% endblock title %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 p-5">
+            <form method="Post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <textarea cols="120" rows="18" name="textupdate">{{texts}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
